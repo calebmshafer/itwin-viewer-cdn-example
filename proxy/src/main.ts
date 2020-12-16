@@ -13,8 +13,6 @@ import { CustomExpressServer } from "./CustomExpressServer";
     const server = new CustomExpressServer(oidcClient);
 
     await server.initialize(process.env.PORT ?? 3001);
-    // await backend.initialize();
-    // await backend.startServer();
     console.log("READY");
   } catch (error) {
     // logException(error, "Unhandled exception thrown in general-purpose-imodeljs-backend");

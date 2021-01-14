@@ -76,18 +76,18 @@ const App: React.FC = () => {
             contextId={process.env.REACT_APP_TEST_CONTEXT_ID ?? ""}
             iModelId={process.env.REACT_APP_TEST_IMODEL_ID ?? ""}
             authConfig={{ oidcClient: AuthorizationClient.oidcClient }}
-            backend={{
-              customBackend: {
-                rpcParams: {
-                  info: {
-                    title: "general-purpose-imodeljs-backend",
-                    version: "v2.0"
-                  },
-                  uriPrefix: "http://localhost:3001" // This must match the backend
-                }
-              },
-              buddiRegion: 102
-            }}
+            // backend={{
+            //   customBackend: {
+            //     rpcParams: {
+            //       info: {
+            //         title: "general-purpose-imodeljs-backend",
+            //         version: "v2.0"
+            //       },
+            //       uriPrefix: "http://localhost:3001" // This must match the backend
+            //     }
+            //   },
+            //   buddiRegion: 102
+            // }}
           />
         )
       )}

@@ -55,24 +55,19 @@ async function viewModel() {
     authConfig: {
       getUserManagerFunction: getUserManager,
     },
-    backend: {
-      customBackend: {
-        rpcParams: {
-          info: {
-            title: "general-purpose-imodeljs-backend",
-            version: "v2.0"
-          },
-          uriPrefix: "http://localhost:3001" // This must match the backend
-        }
-      }
-    }
+    // backend: {
+    //   customBackend: {
+    //     rpcParams: {
+    //       info: {
+    //         title: "general-purpose-imodeljs-backend",
+    //         version: "v2.0"
+    //       },
+    //       uriPrefix: "http://localhost:3001" // This must match the backend
+    //     }
+    //   }
+    // }
   });
   if (viewer) {
-    viewer.addExtension(
-      "dialogItemsSample",
-      undefined,
-      "http://localhost:3000"
-    );
     viewer.load(
       "efc946af-04a4-4f4d-b31d-a4653f6be2d6",
       "803347b9-aa34-4221-9a9b-42cf59947654"

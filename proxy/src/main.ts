@@ -1,7 +1,10 @@
+import * as dotenv from "dotenv";
 import { AuthClient } from "./AuthClient";
 import { CustomExpressServer } from "./CustomExpressServer";
 
 (async () => {
+  const result = dotenv.config();
+
   try {
     // Setup a client using the client credentials workflow.
     const oidcClient = new AuthClient(

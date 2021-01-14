@@ -113,11 +113,11 @@ export class CustomExpressServer {
         params: JSON.stringify(req.params),
       });
 
-      console.log(forwardRes);
+      // console.log(forwardRes);
       res.send(forwardRes);
     } catch (err) {
-      console.log(err);
-      // console.log("here");
+      // console.log(err);
+      console.log("here");
       res.sendStatus(500);
     }
 
@@ -151,7 +151,7 @@ export class CustomExpressServer {
       data: req.body,
     });
 
-    console.log(forwardRes);
+    // console.log(forwardRes);
 
     // forward response back to the client
   }

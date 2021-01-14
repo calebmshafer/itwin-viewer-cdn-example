@@ -73,8 +73,8 @@ export class CustomExpressServer {
   private async getNewUrl(ctx: AuthorizedClientRequestContext): Promise<string> {
     if (undefined !== this._itwinUrl)
       return this._itwinUrl;
-    // const urlClient = new UrlDiscoveryClient();
-    this._itwinUrl = "http://localhost:3002/" // await urlClient.discoverUrl(ctx, "iModelJsOrchestrator.K8S", undefined);
+    const urlClient = new UrlDiscoveryClient();
+    this._itwinUrl = await urlClient.discoverUrl(ctx, "iModelJsOrchestrator.K8S", undefined);
     ctx.enter();
     return this._itwinUrl;
   }

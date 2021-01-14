@@ -33,7 +33,7 @@ export class AuthClient {
       client_id: this._clientId,
       client_secret: this._clientSecret, // eslint-disable-line @typescript-eslint/naming-convention
     };
-    const issuer = await Issuer.discover("https://qa-imsoidc.bentley.com");
+    const issuer = await Issuer.discover("https://imsoidc.bentley.com");
     this._client = new issuer.Client(clientConfiguration);
     return this._client;
   }
